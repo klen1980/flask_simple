@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block title%}
+{{article.title}}
+{%endblock%}
+{%block body%}
+<div class="container mt-5">
+    <h1>{{article.title}}</h1>
+    <div class="alert alert-info">
+        {{article.text}}
+        <p>Date<b>{{article.date.date()}}</b></p>
+        <a href= "/post/{{article.id}}/delete " class="btn btn-danger">Delete post</a>
+        <a href= "/post/{{article.id}}/edit " class="btn btn-warning">Edit post</a>
+    </div>
+</div>
+{%endblock%}
+
+<button class="btn btn-success rounded-pill px-3" type="button">Success</button>
